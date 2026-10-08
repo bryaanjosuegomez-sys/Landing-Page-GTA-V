@@ -1,0 +1,777 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Doppio+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0719;
+    color: #ffffff;
+    font-family: 'Doppio One', sans-serif;
+}
+
+.barra {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #070410;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.barra.oculta {
+    top: -70px;
+}
+
+.logo-barra {
+    width: 70px;
+    height: 70px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #ccff00;
+}
+
+.boton-verde {
+    background-color: #ccff00;
+    color: #000000;
+    border: none;
+    height: 40px;
+    padding: 0px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-verde:hover {
+    background-color: #b3e600;
+}
+
+.boton-pequeno {
+    background-color: #ccff00;
+    color: #000000;
+    border: none;
+    height: 35px;
+    padding: 0px 16px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-pequeno-btn{
+    background-color: #ccff00;
+    color: #000000;
+    border: none;
+    height: 35px;
+    padding: 0px 16px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 190px;
+}
+
+.boton-pequeno:hover {
+    background-color: #b3e600;
+}
+
+.boton-borde {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    height: 40px;
+    padding: 0px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.boton-borde:hover {
+    background-color: #333333;
+}
+
+.boton-redondo {
+    background-color: #ccff00;
+    color: #000000;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.portada {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+    overflow: hidden;
+}
+
+.contenedor-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-fondo {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 115%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-portada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 7, 25, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    gap: 15px;
+    z-index: 2;
+}
+
+.logo-juego {
+    padding: 30px;
+    width: 340px;
+    height: auto;
+}
+
+.texto-portada h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+}
+
+.texto-portada p {
+    width: 400px;
+    color: #cccccc;
+}
+
+.bloque-explorar {
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: #17102e;
+    border-radius: 10px;
+    width: 31%;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.tarjeta-blanca {
+    background-color: rgba(11, 7, 25, 0.6);
+    color: white;
+}
+
+.tarjeta-ancha {
+    width: 100%;
+    min-height: 250px;
+    background-color: #17102e;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tarjeta-ancha img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta-ancha .contenido-tarjeta {
+    width: 50%;
+    padding: 30px;
+}
+
+.bloque-personajes {
+    padding: 50px;
+    background-color: #120c24;
+    text-align: center;
+}
+
+.titulo-seccion h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.titulo-seccion p {
+    color: #aaaaaa;
+    margin-bottom: 30px;
+}
+
+.lista-personajes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.persona {
+    cursor: pointer;
+    width: 180px;
+}
+
+.foto-persona {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ccff00;
+    margin-bottom: 10px;
+}
+
+.bloque-detalles {
+    padding: 50px;
+}
+
+.cuadros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cuadro {
+    background-color: #17102e;
+    border-radius: 10px;
+    padding: 15px;
+    width: 23%;
+    min-height: 250px;
+}
+
+.cuadro img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cuadro-grande {
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.cuadro-grande img {
+    width: 100%;
+    height: 100%;
+}
+
+.texto-abajo {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.biblioteca {
+    background: #120c24;
+    padding: 80px 40px;
+}
+
+.textoB {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tarjetas {
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.tarjeta1,
+.tarjeta2,
+.tarjeta3,
+.tarjeta4 {
+    width: 100%; 
+    min-height: 260px;
+    font-size: 15px;
+    padding: 20px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+}
+
+.tarjeta1:hover,
+.tarjeta2:hover,
+.tarjeta3:hover,
+.tarjeta4:hover {
+    background-color: rgb(17, 17, 17); 
+    cursor: pointer;
+    transform: translateY(-4px);
+}
+
+.gta3,
+.viceC,
+.gtaSa,
+.gtaIV {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.pie-pagina {
+    background-color: #070410;
+    padding: 40px;
+    text-align: center;
+}
+
+.caja-morada {
+    background-color: #7b2cbf;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    min-height: 100px;
+}
+
+.texto-pie p {
+    color: #777777;
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+.promo {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+    padding: 20px;
+}
+
+.imgPromo {
+    flex: 1 1 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.imgPromo img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.Play {
+    flex: 1 1 480px;
+    margin-top: 0;
+}
+
+.tarjeta-Prom {
+    margin-top: 85px;
+    background-color: gray;
+    color: #111111;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.encabezado-producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.encabezado-producto h2 {
+    font-size: 28px;
+    color: #000000;
+    font-family: 'Doppio One', sans-serif;
+}
+
+.estado {
+    font-size: 12px;
+    color: #201c1c66;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.precio-contenedor {
+    margin-bottom: 20px;
+}
+
+.precio-actual {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin-right: 12px;
+}
+
+.banner-caracteristicas {
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.item-banner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.caja-destacada {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #333333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lista-detalles {
+    list-style-type: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lista-detalles li {
+    font-size: 13px;
+    color: black;
+    line-height: 1.4;
+}
+
+.ventana-fondo {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventana-fondo.activa {
+    display: flex;
+}
+
+.caja-ventana {
+    background-color: #17102e;
+    border: 2px solid #ccff00;
+    border-radius: 15px;
+    padding: 20px;
+    width: 440px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.boton-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #fafbf7;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.texto-ventana {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.texto-ventana h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ccff00;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.texto-ventana h4 {
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.texto-ventana p {
+    color: #dddddd;
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #ccff00;
+    color: #000000;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.img-modal {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccff00;
+}
+
+.circulo-personajes {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 10px auto;
+    border-radius: 50%;
+    border: 2px dashed #ccff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo-personajes .mini-p {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccff00;
+}
+
+.circulo-personajes .p-michael {
+    top: 2px;
+}
+
+.circulo-personajes .p-franklin {
+    bottom: 5px;
+    left: 5px;
+}
+
+.circulo-personajes .p-trevor {
+    bottom: 5px;
+    right: 5px;
+}
+
+.circulo-personajes .texto-centro {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ccff00;
+    font-size: 12px;
+    text-align: center;
+}
+
+.contacto {
+    background-color: #17102e;
+    border-radius: 10px;
+    padding: 50px;
+    width: 750px;
+    margin: 0 auto;
+}
+
+.contacto h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ccff00;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.formulario div {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.formulario input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btnmensaje {
+    background-color: #ccff00;
+    color: #000000;
+    border: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnmensaje:hover {
+    background-color: #b3e600;
+}
+
+@media (max-width: 768px) {
+    .barra {
+        padding: 0px 20px;
+    }
+
+    .menu a {
+        display: none;
+    }
+
+    .portada {
+        height: auto;
+        min-height: 500px;
+    }
+
+    .texto-portada {
+        padding-left: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto-portada p {
+        width: 100%;
+    }
+
+    .botones-portada {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tarjeta {
+        width: 100%;
+        height: auto;
+    }
+
+    .tarjeta-ancha {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .tarjeta-ancha img,
+    .tarjeta-ancha .contenido-tarjeta {
+        width: 100%;
+    }
+
+    .lista-personajes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuadro {
+        width: 100%;
+        height: auto;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+    }
+
+    .caja-morada {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+    }
+
+    .caja-ventana {
+        width: 90%;
+    }
+
+    .promo {
+        flex-direction: column;
+    }
+
+    .tarjeta-Prom {
+        padding: 20px;
+    }
+
+    .contacto {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+}
